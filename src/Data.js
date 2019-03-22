@@ -20,6 +20,21 @@ const ProductData = {
             cost: 5.0,
             stock: 0
         },
+        {
+            name: "Strawberry",
+            cost: 3.0,
+            stock: 3
+        },
+        {
+            name: "Peach",
+            cost: 2.0,
+            stock: 2
+        },
+        {
+            name: "Mochi",
+            cost: 5.0,
+            stock: 1
+        },
     ]
 }
 
