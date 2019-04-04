@@ -5,7 +5,7 @@ class Receipt extends React.Component {
     return (
         <div className="receipt-item" key={item.name}>
             <div className="receipt-text">
-                {item.productName}
+                {item.productName} X {item.count}
             </div>
             <div className="receipt-text">
                 ${item.price * item.count}
