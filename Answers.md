@@ -15,3 +15,12 @@ Question 1.4
 
 * (1.4b) By pulling the data from an object, we know where the contents of all the data are, and this makes it much easier for us to incorporate more data. For example, rather than creating an entirely new Product component manually each time we add an item, we just append a new item to a list in ProductData.
 
+Question 2.0
+* Whenever I go running outdoors, I like to use my Fitbit app to track my location and running path. A React component that tracks your location would need to use state to not only remember your last updated position, but also all other previous locations you've been in to create a route for you.
+
+Question 2.1
+* We accomplish parent-to-child communication in React by using the parent's own props to update the children's states. Child-to-parent communication works by passing a method written inside the parent component from the parent to the child, which the child will then call to update the parent. They can't be the same method because the parent knows its own data, but to react to something the child changes, the method needs to be called from the parent's own component, which should then be triggered by the child component.
+
+Question 2.2
+* Since I represent the cart items as an array, we can set state to append new items to this list each time we add a new product to our cart. To remove items, we can reset the state to the array after it pops the product we want to take from our cart.
+

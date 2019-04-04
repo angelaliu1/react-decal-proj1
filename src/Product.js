@@ -5,18 +5,8 @@ import PropTypes from 'prop-types';
 
         constructor(props) {
             super(props);
-            this.counter = 0;
-        }
-
-        addToCart() {
-            if (this.counter >= this.props.limit) {
-                alert("There are too many " + this.props.productName + "s in your cart!");
-            } else if (this.props.limit === 0) {
-                alert("This item is out of stock!");
-            } else {
-                this.counter = this.counter + 1;
-                alert("There are " + this.counter + " " + this.props.productName + "s in your cart!");
-                console.log(this.counter, this.props.limit);
+            this.state = {
+                cartItems: [],
             }
         }
 
@@ -32,9 +22,13 @@ import PropTypes from 'prop-types';
                                 Price: ${this.props.price}
                             </div> 
                         </div>
-                        <div className="ui bottom attached button" onClick={() => this.addToCart()}>
+                        <div className="ui bottom attached button" onClick={() => this.props.onAddToCart(this.props.productName, this.props.price)}>
                             <i className="add icon"></i>
                             Add to Cart
+                        </div>
+                        <div className="ui bottom attached button" onClick={() => this.props.onRemoveFromCart(this.props.productName)}>
+                            <i className="remove icon"></i>
+                            Remove from Cart
                         </div>
                     </div>
                 </div>
